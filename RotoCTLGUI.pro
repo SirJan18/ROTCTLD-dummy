@@ -1,5 +1,4 @@
 QT       += core gui
-QT       += network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -11,17 +10,13 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    rotctld.cpp \
-    rotctlreader.cpp \
-    rotoctl_gui.cpp
+    rotctl_gui.cpp
 
 HEADERS += \
-    rotctld.h \
-    rotctlreader.h \
-    rotoctl_gui.h
+    rotctl_gui.h
 
 FORMS += \
-    rotoctl_gui.ui
+    rotctl_gui.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
