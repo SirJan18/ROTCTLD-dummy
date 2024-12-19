@@ -10,10 +10,12 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    rotctl_gui.cpp
+    rotctl_gui.cpp \
+    rotctld.cpp
 
 HEADERS += \
-    rotctl_gui.h
+    rotctl_gui.h \
+    rotctld.h
 
 FORMS += \
     rotctl_gui.ui
