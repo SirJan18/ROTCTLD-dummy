@@ -6,6 +6,8 @@
 #include <QAbstractButton>
 #include <QPushButton>
 
+#include "rotctld.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class ROTCTL_GUI;
@@ -22,10 +24,18 @@ public:
 
 private:
     Ui::ROTCTL_GUI *ui;
+    QThread *worker_thread;
+    ROTCTLD *worker_instance;
 
 public slots:
     void tcpStart();
     void tcpStop();
+
+    void rotctlLog(QString data);
+
+signals:
+    void tcpStartSignal();
+    void tcpStopSignal();
 
 
 };
